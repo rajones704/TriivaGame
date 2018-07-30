@@ -1,0 +1,86 @@
+
+body {
+    background-image: url("../images/color-669630_1920.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color:white;
+     font-family: Century Gothic;
+    fill-opacity: inherit;    
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: .25px;
+    font-size:20px;
+ 
+}
+
+
+.jumbotron {  
+  box-sizing: border-box;
+  height: 600px;
+  background-color: rgba(0, 0, 0, 0);
+  font-size:20px;
+}
+
+.main-button-container {
+  margin-top: 175px;
+  max-width: 610px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.timer-p {
+  margin-top: 40px;
+}
+
+.answer:hover {
+  background: rgb(186, 190, 245);
+}
+
+.answer {
+  padding-top: 7px;
+  height: 45px;
+  width: 100%;
+  color: black;
+  padding-left: 14px;
+  background-color: white;
+  border-radius: 5px;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.answer:focus{
+  background-color: none;
+}
+
+.img-right {
+  margin-top: 40px;
+  height: 25em;
+  width: 25em;
+}
+
+.first-answer {
+  margin-top: 40px;
+}
+
+.start-button {
+  width:50%;
+  background-color:rgb(21, 189, 240);
+}
+
+.start-button:hover {
+  background-color: #FF1200;
+}
+
+.reset-button {
+  width:50%;
+  background-color:rgb(21, 189, 240) ;
+  border: none;
+}
+
+.reset-button:hover {
+  background-color: #FF1200;
+}
+
+.summary-correct {
+  margin-top: 40px;
+}
