@@ -1,20 +1,30 @@
 var trivia = {
-  initialScreen: "",
+  firstScreen: "",
   correctCounter: 0,
   inCorrectCounter: 0,
-  unAnsweredCounter: 0,
   gameHTML: "",
 
-  questionsArray: ["Which artist made his name with paintings of soup cans and Coca-Cola bottles?",
-    "Who painted The Persistence of Memory?", "Which famous painter and sculptor was also an architect and engineer to Cesare Borgia?",
-    "Which American artist was a pioneer of Abstract Expressionism, and a leading exponent of action painting?",
-    "Which Dutch painter cut off part of his ear after a quarrel?"],
+  questionsArray:
 
-  answerArray: [["Joseph A.Cambell", "John Pemberton", "Andy Warhol", "Jean-Michel Basquiat"],
-  ["John B. Forgetfull", "Banksy", "Salvador Dali", "Georgia O'Keefe"],
-  ["Raphael", "Donatello", "Michelangelo", "Leonardo"], 
-  ["Kazmir Malevich", "Jackson Pollock", "Henri Matisse", "Pablo Picasso"],
-  ["Vincent Van Gough", "Rembrandt", "Walt Whitman", "Kevin Fauth"],],
+    ["Which artist made his name with paintings of soup cans and Coca-Cola bottles?",
+
+      "Who painted The Persistence of Memory?", "Which famous painter and sculptor was also an architect and engineer to Cesare Borgia?",
+
+      "Which American artist was a pioneer of Abstract Expressionism, and a leading exponent of action painting?",
+
+      "Which Dutch painter cut off part of his ear after a quarrel?"],
+
+  answerArray:
+
+    [["Joseph A.Cambell", "John Pemberton", "Andy Warhol", "Jean-Michel Basquiat"],
+
+    ["John B. Forgetfull", "Banksy", "Salvador Dali", "Georgia O'Keefe"],
+
+    ["Raphael", "Donatello", "Michelangelo", "Leonardo"],
+
+    ["Kazmir Malevich", "Jackson Pollock", "Henri Matisse", "Pablo Picasso"],
+
+    ["Vincent Van Gough", "Rembrandt", "Walt Whitman", "Kevin Fauth"],],
 
   correctAnswers: ["C. Andy Warhol", "C. Salvador Dali", "D. Leonardo", "B. Jackson Pollock", "A. Vincent Van Gough"],
 
@@ -32,9 +42,9 @@ var trivia = {
 //ALL FUNCTIONS
 function startScreen() {
   //Create the start button
-  trivia.initialScreen = "<p class='text-center main-button'><a class='btn btn-primary btn-lg start-button text-center' href='#'>Start!</a></p>";
+  trivia.firstScreen = "<p class='text-center main-button'><a class='btn btn-primary btn-lg start-button text-center' href='#'>Start!</a></p>";
   //Add Start button to main-area
-  $(".main-area").html(trivia.initialScreen);
+  $(".main-area").html(trivia.firstScreen);
 };
 
 function timer() {
@@ -88,7 +98,6 @@ function loss() {
 };
 
 function timeOutLoss() {
-  trivia.unAnsweredCounter++;
 
   trivia.gameHTML = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + trivia.timeCounter + "</span></p>" +
 
@@ -104,7 +113,7 @@ function finalScreen() {
 
     "<p class='text-center'>Your Final Score!" + "</p>" + "<p class='summary-correct'>Correct Answers: " + trivia.correctCounter +
 
-    "</p>" + "<p>Wrong Answers: " + trivia.inCorrectCounter + "</p>" + "<p>Unanswered: " + trivia.unAnsweredCounter + "</p>" +
+    "</p>" + "<p>Wrong Answers: " + trivia.inCorrectCounter + "</p>" +  "</p>" +
 
     "<p class='text-center reset-button-container'><a class='btn btn-primary btn-lg btn-block reset-button' href='#' role='button'>Play Again!</a></p>";
 
@@ -115,7 +124,6 @@ function resetGame() {
   trivia.questionCounter = 0;
   trivia.correctCounter = 0;
   trivia.inCorrectCounter = 0;
-  trivia.unAnsweredCounter = 0;
   trivia.timeCounter = 0;
   generateHTML();
   timer();
