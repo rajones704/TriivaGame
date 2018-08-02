@@ -24,7 +24,7 @@ var trivia = {
 
     ["Kazmir Malevich", "Jackson Pollock", "Henri Matisse", "Pablo Picasso"],
 
-    ["Vincent Van Gough", "Rembrandt", "Walt Whitman", "Kevin Fauth"],],
+    ["Vincent Van Gough", "Rembrandt", "Walt Whitman", "Bob Ross"],],
 
   correctAnswers: ["C. Andy Warhol", "C. Salvador Dali", "D. Leonardo", "B. Jackson Pollock", "A. Vincent Van Gough"],
 
